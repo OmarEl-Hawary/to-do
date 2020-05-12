@@ -26,7 +26,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React</a> - <a
+          Learn React
+        </a>{' '}
+        -{' '}
+        <a
           className="App-link"
           href="https://www.carbondesignsystem.com/"
           target="_blank"
