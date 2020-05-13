@@ -6,6 +6,19 @@ import { Link } from 'react-router-dom';
 import todos from '../data/todos';
 
 class Main extends Component {
+  constructor() {
+    super();
+    this.state = { todos };
+    this.removeTask = this.removeTask.bind(this);
+  }
+
+  removeTask(todoRemoved) {
+    console.log(todoRemoved.name);
+    this.setState((state) => ({
+      todos: state.todos.filter((todo) => todo !== todoRemoved),
+    }));
+  }
+
   render() {
     return (
       <div>
@@ -18,7 +31,10 @@ class Main extends Component {
             </Link>
           </Header>
           <Content>
-            <AllToDos todos={todos}></AllToDos>
+            <AllToDos
+              todos={this.state.todos}
+              onRemoveTask={this.removeTask}
+            ></AllToDos>
           </Content>
         </div>
       </div>
