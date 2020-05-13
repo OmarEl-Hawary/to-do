@@ -18,7 +18,7 @@ class Main extends Component {
             </Link>
           </Header>
           <Content>
-            <AllToDos tasks={tasks}></AllToDos>
+            <AllToDos todos={todos}></AllToDos>
           </Content>
         </div>
       </div>

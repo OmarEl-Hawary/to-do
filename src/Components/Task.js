@@ -7,11 +7,11 @@ class Task extends Component {
     return (
       <div>
         <ol>
-          <Link>
+          {/* <Link>
             {tasks.map((task, index) => (
               <li key={index}>{task.name}</li>
             ))}
-          </Link>
+          </Link> */}
         </ol>
       </div>
     );
