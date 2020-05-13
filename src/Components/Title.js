@@ -5,7 +5,9 @@ function Title() {
   return (
     <div>
       <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit' }}>
-        <h4>ToDo List App</h4>
+        <h4>
+          <strong>ToDo List App</strong>
+        </h4>
       </Link>
     </div>
   );

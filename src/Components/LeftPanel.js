@@ -18,7 +18,7 @@ function LeftPanel() {
               to="/"
               style={{ color: 'inherit', textDecoration: 'inherit' }}
             >
-              All Tasks
+              <h5>All Tasks</h5>
             </Link>
           </SideNavLink>
           <SideNavLink to="/AddTask">
@@ -27,7 +27,7 @@ function LeftPanel() {
               renderIcon={Add16}
               style={{ color: 'inherit', textDecoration: 'inherit' }}
             >
-              Add Tasks
+              <h5>Add Task</h5>
             </Link>
           </SideNavLink>
         </SideNavItems>
