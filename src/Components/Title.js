@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Title extends Component {
-  render() {
-    return (
-      <div>
-        <Link style={{ color: 'inherit', textDecoration: 'inherit' }}>
-          {this.props.title}
-        </Link>
-      </div>
-    );
-  }
+function Title(props) {
+  return (
+    <div>
+      <Link style={{ color: 'inherit', textDecoration: 'inherit' }}>
+        {props.title}
+      </Link>
+    </div>
+  );
 }
 
 export default Title;
