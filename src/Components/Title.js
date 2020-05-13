@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Title(props) {
+function Title() {
   return (
     <div>
       <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit' }}>
