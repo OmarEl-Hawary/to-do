@@ -1,9 +1,9 @@
-import { combineReducers } from 'redux';
+// import { combineReducers } from 'redux';
 
-//TODO
+// TODO
 
-const rootReducer = combineReducers({
-  /*function1 ,function2*/
-});
+// const rootReducer = combineReducers({
+//   /*function1 ,function2*/
+// });
 
-export default rootReducer;
+// export default rootReducer;
