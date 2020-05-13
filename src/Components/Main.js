@@ -3,6 +3,7 @@ import Title from './Title';
 import AllToDos from './AllToDos';
 import { Content, Header, HeaderName } from 'carbon-components-react';
 import { Link } from 'react-router-dom';
+import todos from '../data/todos';
 
 class Main extends Component {
   render() {
@@ -17,7 +18,7 @@ class Main extends Component {
             </Link>
           </Header>
           <Content>
-            <AllToDos></AllToDos>
+            <AllToDos tasks={tasks}></AllToDos>
           </Content>
         </div>
       </div>

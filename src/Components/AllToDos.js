@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import List from './List';
+import Task from './Task';
 
 class AllToDos extends Component {
   render() {
     return (
       <div>
-        <List></List>
+        {this.props.tasks.map((task, index) => (
+          <Task key={index} task={task}></Task>
+        ))}
       </div>
     );
   }
