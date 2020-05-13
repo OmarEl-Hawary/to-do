@@ -5,8 +5,8 @@ class AllToDos extends Component {
   render() {
     return (
       <div>
-        {this.props.tasks.map((task, index) => (
-          <Task key={index} task={task}></Task>
+        {this.props.todos.map((todo, index) => (
+          <Task key={index} todo={todo}></Task>
         ))}
       </div>
     );
