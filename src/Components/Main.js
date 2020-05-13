@@ -1,33 +1,26 @@
 import React, { Component } from 'react';
 import Title from './Title';
-import List from './List';
+import AllToDos from './AllToDos';
+import { Content, Header, HeaderName } from 'carbon-components-react';
+import { Link } from 'react-router-dom';
 
 class Main extends Component {
   render() {
     return (
       <div>
         <div>
-          <Title title="ToDo List"></Title>
-          <List></List>
+          <Header aria-label="IBM Platform Name">
+            <Link>
+              <HeaderName prefix="">
+                <Title title="ToDo List"></Title>
+              </HeaderName>
+            </Link>
+          </Header>
+          <Content>
+            <AllToDos></AllToDos>
+          </Content>
         </div>
       </div>
-
-      // <div>
-      //   <Link to="/">
-      //     <Header aria-label="IBM Platform Name">
-      //       <HeaderName prefix="">To-Do App</HeaderName>
-      //     </Header>
-      //   </Link>
-      //   <ol class="bx--list--ordered">
-      //     <Link>
-      //       {tasks.map((task, index) => (
-      //         <li class="bx--list__item" key={index}>
-      //           {task.description}
-      //         </li>
-      //       ))}
-      //     </Link>
-      //   </ol>
-      // </div>
     );
   }
 }

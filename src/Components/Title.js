@@ -11,12 +11,6 @@ class Title extends Component {
         </Link>
       </Header>
     );
-
-    //   <Link to="/">
-    //   <Header aria-label="IBM Platform Name">
-    //   <HeaderName prefix="">To-Do App</HeaderName>
-    // </Header>;
-    //   </Link>
   }
 }
 
