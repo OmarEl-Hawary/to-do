@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Title from './Title';
 import AllToDos from './AllToDos';
 import { Content, Header, HeaderName } from 'carbon-components-react';
-import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import todos from '../data/todos';
+import AddTask from './AddTask';
 
 class Main extends Component {
   constructor() {
@@ -22,21 +23,40 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Header aria-label="IBM Platform Name">
-            <Link>
-              <HeaderName prefix="">
-                <Title title="ToDo List"></Title>
-              </HeaderName>
-            </Link>
-          </Header>
-          <Content>
-            <AllToDos
-              todos={this.state.todos}
-              onRemoveTask={this.removeTask}
-            ></AllToDos>
-          </Content>
-        </div>
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <div>
+              <Header aria-label="IBM Platform Name">
+                <HeaderName prefix="">
+                  <Title></Title>
+                </HeaderName>
+              </Header>
+              <Content>
+                <AllToDos
+                  todos={this.state.todos}
+                  onRemoveTask={this.removeTask}
+                ></AllToDos>
+              </Content>
+            </div>
+          )}
+        ></Route>
+        <Route
+          path="/AddTask"
+          render={() => (
+            <div>
+              <Header aria-label="IBM Platform Name">
+                <HeaderName prefix="">
+                  <Title></Title>
+                </HeaderName>
+              </Header>
+              <Content>
+                <AddTask></AddTask>
+              </Content>
+            </div>
+          )}
+        ></Route>
       </div>
     );
   }

@@ -1,15 +1,13 @@
-// import React, { Component } from 'react';
-// import AddFilled16 from 'carbon-components-react';
+import React, { Component } from 'react';
 
-//TODO
-// class AddTask extends Component {
-//   render() {
-//     return <div></div>
-//   }
-// }
-
-{
-  /* <Button style={customStyle} renderIcon={AddFilled16}>
-  Add Task
-</Button>; */
+class AddTask extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Add tasks page</h1>
+      </div>
+    );
+  }
 }
+
+export default AddTask;

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 function Title(props) {
   return (
     <div>
-      <Link style={{ color: 'inherit', textDecoration: 'inherit' }}>
-        {props.title}
+      <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit' }}>
+        <h4>ToDo List App</h4>
       </Link>
     </div>
   );
