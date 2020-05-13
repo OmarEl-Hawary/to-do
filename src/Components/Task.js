@@ -7,9 +7,9 @@ class Task extends Component {
     return (
       <div>
         <ol>
-          <Link>
-            <li>{todo.name}</li>
-          </Link>
+          <li>
+            <Link>{todo.name}</Link>
+          </li>
         </ol>
       </div>
     );
