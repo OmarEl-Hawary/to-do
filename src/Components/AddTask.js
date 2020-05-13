@@ -8,6 +8,8 @@
 //   }
 // }
 
-// <Button style={customStyle} renderIcon={AddFilled16}>
-//   Add Task
-// </Button>;
+{
+  /* <Button style={customStyle} renderIcon={AddFilled16}>
+  Add Task
+</Button>; */
+}
