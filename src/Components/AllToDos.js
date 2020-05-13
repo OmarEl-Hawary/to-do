@@ -1,6 +1,5 @@
 import React from 'react';
 import Task from './Task';
-import { Content } from 'carbon-components-react';
 import LeftPanel from './LeftPanel';
 import PageHeader from './PageHeader';
 

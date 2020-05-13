@@ -7,27 +7,32 @@ function Task(props) {
   const todo = props.todo;
   return (
     <Content>
-      {/* // <div className="bx--grid">
-    //   <div className="bx--row">
-    //     <section className="bx--offset-lg-3 bx--col-lg-13">
-    //       <Content style={{ lineHeight: '30px' }}> */}
-      <Link style={{ color: 'inherit', textDecoration: 'inherit' }}>
-        <strong>{todo.name}</strong>
-      </Link>{' '}
-      <Button
-        size="small"
-        kind="danger"
-        renderIcon={TrashCan16}
-        onClick={() => {
-          props.onRemoveTask(todo);
-        }}
-      >
-        {' '}
-        Remove Task
-      </Button>
-      {/* </Content>
-        </section>
-      </div> */}
+      <h5>
+        <Link
+          style={{
+            color: 'inherit',
+            textDecoration: 'inherit',
+            lineHeight: '30px',
+          }}
+        >
+          <strong>{todo.name}</strong>
+        </Link>{' '}
+        <Button
+          style={{
+            marginLeft: '50px',
+          }}
+          size="small"
+          kind="danger"
+          hasIconOnly
+          tooltipAlignment="center"
+          tooltipPosition="bottom"
+          iconDescription="remove task button"
+          renderIcon={TrashCan16}
+          onClick={() => {
+            props.onRemoveTask(todo);
+          }}
+        ></Button>
+      </h5>
     </Content>
   );
 }

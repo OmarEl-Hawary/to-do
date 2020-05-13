@@ -33,7 +33,14 @@ class Main extends Component {
                   <Title></Title>
                 </HeaderName>
               </Header>
-              <Content style={{ textAlign: 'center' }}>
+              <Content
+                style={{
+                  textAlign: 'center',
+                  position: 'relative',
+                  paddingRight: '100px',
+                  paddingDown: '100px',
+                }}
+              >
                 <AllToDos
                   todos={this.state.todos}
                   onRemoveTask={this.removeTask}
@@ -51,7 +58,14 @@ class Main extends Component {
                   <Title></Title>
                 </HeaderName>
               </Header>
-              <Content style={{ textAlign: 'center' }}>
+              <Content
+                style={{
+                  textAlign: 'center',
+                  position: 'relative',
+                  paddingRight: '100px',
+                  paddingDown: '100px',
+                }}
+              >
                 <AddTask></AddTask>
               </Content>
             </div>
