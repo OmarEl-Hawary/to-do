@@ -31,7 +31,7 @@ function Task(props) {
           iconDescription="remove task button"
           renderIcon={TrashCan16}
           onClick={() => {
-            props.removeToDo(props.index);
+            props.startRemovingTodo(props.index, todo.id);
           }}
         ></Button>
       </h5>

@@ -9,6 +9,8 @@ const todoReducer = function todos(state = _todos, action) {
       ];
     case 'ADD_TODO':
       return [...state, action.todo];
+    case 'LOAD_TODOS':
+      return action.todos;
     default:
       return state;
   }

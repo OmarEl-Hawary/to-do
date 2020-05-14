@@ -8,9 +8,13 @@ function AllToDos(props) {
     <div>
       <Content>
         <PageHeader pageheader={'All Tasks'}></PageHeader>
-        {props.todos.map((todo, index) => (
-          <Task key={index} todo={todo} {...props} index={index}></Task>
-        ))}
+        {props.todos
+          .sort(function (x, y) {
+            return y.name - x.name;
+          })
+          .map((todo, index) => (
+            <Task key={index} todo={todo} {...props} index={index}></Task>
+          ))}
       </Content>
     </div>
   );

@@ -8,6 +8,10 @@ import ToDo from './ToDo';
 import LeftPanel from './LeftPanel';
 
 class Main extends Component {
+  componentDidMount() {
+    this.props.startLoadingToDo();
+  }
+
   render() {
     return (
       <div>
@@ -50,11 +54,7 @@ class Main extends Component {
                   maxWidth: '1000px',
                 }}
               >
-                <AddTask
-                  onAddToDo={(addedToDo) => {
-                    history.push('/');
-                  }}
-                ></AddTask>
+                <AddTask {...this.props} onHistory={history}></AddTask>
               </Content>
             </div>
           )}

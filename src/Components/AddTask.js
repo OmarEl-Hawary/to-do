@@ -20,67 +20,65 @@ class AddTask extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const taskName = event.target.elements.taskName.value;
-    const taskDescription = event.target.elements.taskDescription.value;
-    const taskDate = event.target.elements.taskDate.value;
+    const name = event.target.elements.taskName.value;
+    const description = event.target.elements.taskDescription.value;
+    const date = event.target.elements.taskDate.value;
     const todo = {
       id: Number(new Date()),
-      name: taskName,
-      description: taskDescription,
-      date: taskDate,
+      name: name,
+      description: description,
+      date: date,
     };
-    if (taskName) {
-      this.props.addToDo(todo);
+    if (name) {
+      this.props.startAddingToDo(todo);
       this.props.onHistory.push('/');
     }
   }
 
   render() {
     return (
-      <div>
+      <Content>
+        <PageHeader pageheader={'Add tasks'}></PageHeader>
         <Content>
-          <PageHeader pageheader={'Add tasks'}></PageHeader>
-          <Content>
-            <Form>
-              <FormGroup legendText="">
-                <TextInput
-                  id="taskName"
-                  name="taskName"
-                  labelText="Task Name"
-                  placeholder="Enter task name"
-                  style={{ width: '250px' }}
+          <Form onSubmit={this.handleSubmit}>
+            <FormGroup legendText="">
+              <TextInput
+                id="taskName"
+                name="taskName"
+                labelText="Task Name"
+                placeholder="Enter task name"
+                style={{ width: '250px' }}
+              />
+            </FormGroup>
+            <FormGroup legendText="">
+              <TextArea
+                cols={20}
+                id="taskDescription"
+                name="taskDescription"
+                labelText="Task Description"
+                placeholder="Enter task description"
+                rows={4}
+              />
+            </FormGroup>
+            <FormGroup legendText="">
+              <DatePicker dateFormat="m/d/Y" datePickerType="single">
+                <DatePickerInput
+                  id="taskDate"
+                  name="taskDate"
+                  placeholder="mm/dd/yyyy"
+                  type="text"
+                  labelText=""
                 />
-              </FormGroup>
-              <FormGroup legendText="">
-                <TextArea
-                  cols={20}
-                  id="taskDescription"
-                  name="taskDescription"
-                  labelText="Task Description"
-                  placeholder="Enter task description"
-                  rows={4}
-                />
-              </FormGroup>
-              <FormGroup legendText="">
-                <DatePicker dateFormat="m/d/Y" datePickerType="single">
-                  <DatePickerInput
-                    id="taskDate"
-                    name="taskDate"
-                    placeholder="mm/dd/yyyy"
-                    type="text"
-                    labelText=""
-                  />
-                </DatePicker>
-              </FormGroup>
-              <p align="left">
-                <Button type="submit" renderIcon={AddFilled16}>
-                  Add
-                </Button>
-              </p>
-            </Form>
-          </Content>
+              </DatePicker>
+            </FormGroup>
+            <p align="left">
+              <Button type="submit" renderIcon={AddFilled16}>
+                Add
+              </Button>
+            </p>
+          </Form>
         </Content>
-      </div>
+      </Content>
     );
   }
 }
