@@ -8,6 +8,7 @@ class AddTask extends Component {
       <div>
         <LeftPanel></LeftPanel>
         <PageHeader pageheader={'Add tasks'}></PageHeader>
+        <form></form>
       </div>
     );
   }
