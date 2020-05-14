@@ -1,7 +1,6 @@
 import _todos from '../data/todos';
 
 const todoReducer = function todos(state = _todos, action) {
-  console.log(action.index);
   switch (action.type) {
     case 'REMOVE_TODO':
       return [
