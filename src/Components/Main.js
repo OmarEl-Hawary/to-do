@@ -8,8 +8,12 @@ import ToDo from './ToDo';
 import LeftPanel from './LeftPanel';
 
 class Main extends Component {
+  state = { loading: true };
+
   componentDidMount() {
-    this.props.startLoadingToDo();
+    this.props.startLoadingToDo().then(() => {
+      this.setState({ loading: false });
+    });
   }
 
   render() {
@@ -72,7 +76,11 @@ class Main extends Component {
                   maxWidth: '1000px',
                 }}
               >
-                <ToDo {...this.props} {...params}></ToDo>
+                <ToDo
+                  loading={this.state.loading}
+                  {...this.props}
+                  {...params}
+                ></ToDo>
               </Content>
             </div>
           )}

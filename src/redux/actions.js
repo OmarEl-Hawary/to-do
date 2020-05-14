@@ -1,6 +1,7 @@
 import { database } from '../database/config';
 
 export function startRemovingTodo(index, id) {
+  console.log(id);
   return (dispatch) => {
     return database
       .ref(`todos/${id}`)

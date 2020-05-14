@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Content } from 'carbon-components-react';
-import { TrashCan16 } from '@carbon/icons-react';
+import { Checkmark16 } from '@carbon/icons-react';
 
 function Task(props) {
   const todo = props.todo;
@@ -24,12 +24,11 @@ function Task(props) {
             marginLeft: '50px',
           }}
           size="small"
-          kind="danger"
           hasIconOnly
           tooltipAlignment="center"
           tooltipPosition="bottom"
-          iconDescription="remove task button"
-          renderIcon={TrashCan16}
+          iconDescription="Done"
+          renderIcon={Checkmark16}
           onClick={() => {
             props.startRemovingTodo(props.index, todo.id);
           }}
