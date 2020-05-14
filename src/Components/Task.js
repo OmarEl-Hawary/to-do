@@ -9,6 +9,7 @@ function Task(props) {
     <Content>
       <h5>
         <Link
+          to={`/ToDo/${todo.id}`}
           style={{
             color: 'inherit',
             textDecoration: 'inherit',
@@ -30,7 +31,7 @@ function Task(props) {
           iconDescription="remove task button"
           renderIcon={TrashCan16}
           onClick={() => {
-            props.onRemoveTask(todo);
+            props.removeToDo(props.index);
           }}
         ></Button>
       </h5>

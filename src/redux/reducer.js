@@ -1,8 +1,19 @@
 import { combineReducers } from 'redux';
+import _todos from '../data/todos';
 
-const rootReducer = combineReducers({
-  /*function1 ,function2*/
-  //TODO
-});
+const todoReducer = function todos(state = _todos, action) {
+  console.log(action.index);
+  switch (action.type) {
+    case 'REMOVE_TODO':
+      return [
+        ...state.slice(0, action.index),
+        ...state.slice(action.index + 1),
+      ];
+    case 'ADD_TODO':
+      return [...state, action.todo];
+    default:
+      return state;
+  }
+};
 
-export default rootReducer;
+export default todoReducer;

@@ -2,15 +2,17 @@ import React from 'react';
 import Task from './Task';
 import LeftPanel from './LeftPanel';
 import PageHeader from './PageHeader';
+import { Content } from 'carbon-components-react';
 
 function AllToDos(props) {
   return (
     <div>
-      <LeftPanel></LeftPanel>
-      <PageHeader pageheader={'All Tasks'}></PageHeader>
-      {props.todos.map((todo, index) => (
-        <Task key={index} todo={todo} onRemoveTask={props.onRemoveTask}></Task>
-      ))}
+      <Content>
+        <PageHeader pageheader={'All Tasks'}></PageHeader>
+        {props.todos.map((todo, index) => (
+          <Task key={index} todo={todo} {...props} index={index}></Task>
+        ))}
+      </Content>
     </div>
   );
 }

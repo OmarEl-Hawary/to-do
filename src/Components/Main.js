@@ -3,72 +3,77 @@ import Title from './Title';
 import AllToDos from './AllToDos';
 import { Content, Header, HeaderName } from 'carbon-components-react';
 import { Route } from 'react-router-dom';
-import todos from '../data/todos';
 import AddTask from './AddTask';
+import ToDo from './ToDo';
+import LeftPanel from './LeftPanel';
+import PageHeader from './PageHeader';
 
 class Main extends Component {
-  constructor() {
-    super();
-    this.state = { todos };
-    this.removeTask = this.removeTask.bind(this);
-  }
-
-  removeTask(todoRemoved) {
-    console.log(todoRemoved.name);
-    this.setState((state) => ({
-      todos: state.todos.filter((todo) => todo !== todoRemoved),
-    }));
-  }
-
   render() {
     return (
       <div>
+        <LeftPanel></LeftPanel>
+        <Header aria-label="IBM Platform Name">
+          <HeaderName prefix="">
+            <Title></Title>
+          </HeaderName>
+        </Header>
         <Route
           exact
           path="/"
           render={() => (
             <div>
-              <Header aria-label="IBM Platform Name">
-                <HeaderName prefix="">
-                  <Title></Title>
-                </HeaderName>
-              </Header>
               <Content
                 style={{
                   textAlign: 'center',
-                  padding: '0px 0px 0px 230px',
+                  padding: '0px 0px 0px 200px',
                   paddingDown: '200px',
                   minWidth: '500px',
                   maxWidth: '1000px',
                 }}
               >
-                <AllToDos
-                  todos={this.state.todos}
-                  onRemoveTask={this.removeTask}
-                ></AllToDos>
+                <AllToDos {...this.props}></AllToDos>
+              </Content>
+            </div>
+          )}
+        ></Route>
+
+        <Route
+          path="/AddTask"
+          render={({ history }) => (
+            <div>
+              <Content
+                style={{
+                  textAlign: 'center',
+                  padding: '0px 0px 0px 200px',
+                  paddingDown: '200px',
+                  minWidth: '500px',
+                  maxWidth: '1000px',
+                }}
+              >
+                <AddTask
+                  onAddToDo={(addedToDo) => {
+                    history.push('/');
+                  }}
+                ></AddTask>
               </Content>
             </div>
           )}
         ></Route>
         <Route
-          path="/AddTask"
-          render={() => (
+          path="/ToDo/:id"
+          render={(params) => (
             <div>
-              <Header aria-label="IBM Platform Name">
-                <HeaderName prefix="">
-                  <Title></Title>
-                </HeaderName>
-              </Header>
               <Content
                 style={{
                   textAlign: 'center',
-                  padding: '0px 0px 0px 230px',
+                  padding: '0px 0px 0px 200px',
                   paddingDown: '200px',
                   minWidth: '500px',
                   maxWidth: '1000px',
                 }}
               >
-                <AddTask></AddTask>
+                <ToDo {...this.props} {...params}></ToDo>
               </Content>
             </div>
           )}
