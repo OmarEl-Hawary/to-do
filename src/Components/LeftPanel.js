@@ -8,11 +8,10 @@ function LeftPanel() {
       <SideNav
         isFixedNav
         expanded={true}
-        isChildOfHeader={false}
+        isChildOfHeader={true}
         aria-label="Side navigation"
       >
         <SideNavItems>
-          <SideNavLink></SideNavLink>
           <SideNavLink href="/" renderIcon={DocumentTasks16}>
             <h5>All Tasks</h5>
           </SideNavLink>

@@ -8,10 +8,10 @@ class ToDo extends Component {
     const id = Number(match.params.id);
     const todo = todos.find((todo) => todo.id === id);
 
+    //TODO
     return (
       <Content>
         <PageHeader pageheader={todo.name}></PageHeader>
-        //TODO
       </Content>
     );
   }

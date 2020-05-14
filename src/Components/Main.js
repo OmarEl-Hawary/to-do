@@ -11,12 +11,12 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <LeftPanel></LeftPanel>
         <Header aria-label="IBM Platform Name">
           <HeaderName prefix="">
             <Title></Title>
           </HeaderName>
         </Header>
+        <LeftPanel></LeftPanel>
         <Route
           exact
           path="/"

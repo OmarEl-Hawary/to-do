@@ -42,7 +42,7 @@ class AddTask extends Component {
           <PageHeader pageheader={'Add tasks'}></PageHeader>
           <Content>
             <Form>
-              <FormGroup>
+              <FormGroup legendText="">
                 <TextInput
                   id="taskName"
                   name="taskName"
@@ -51,7 +51,7 @@ class AddTask extends Component {
                   style={{ width: '250px' }}
                 />
               </FormGroup>
-              <FormGroup>
+              <FormGroup legendText="">
                 <TextArea
                   cols={20}
                   id="taskDescription"
@@ -61,7 +61,7 @@ class AddTask extends Component {
                   rows={4}
                 />
               </FormGroup>
-              <FormGroup>
+              <FormGroup legendText="">
                 <DatePicker dateFormat="m/d/Y" datePickerType="single">
                   <DatePickerInput
                     id="taskDate"
@@ -73,13 +73,7 @@ class AddTask extends Component {
                 </DatePicker>
               </FormGroup>
               <p align="left">
-                <Button
-                  renderIcon={AddFilled16}
-                  //FIXME
-                  // onClick={() => {
-                  //   props.addToDo(props.index);
-                  // }}
-                >
+                <Button type="submit" renderIcon={AddFilled16}>
                   Add
                 </Button>
               </p>
