@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import LeftPanel from './LeftPanel';
 import PageHeader from './PageHeader';
 import {
   Button,

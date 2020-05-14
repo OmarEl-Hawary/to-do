@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Content } from 'carbon-components-react';
-import Title from './Title';
 import PageHeader from './PageHeader';
 
 class ToDo extends Component {
@@ -12,6 +11,7 @@ class ToDo extends Component {
     return (
       <Content>
         <PageHeader pageheader={todo.name}></PageHeader>
+        //TODO
       </Content>
     );
   }

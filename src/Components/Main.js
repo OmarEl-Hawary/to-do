@@ -6,7 +6,6 @@ import { Route } from 'react-router-dom';
 import AddTask from './AddTask';
 import ToDo from './ToDo';
 import LeftPanel from './LeftPanel';
-import PageHeader from './PageHeader';
 
 class Main extends Component {
   render() {
