@@ -35,9 +35,11 @@ class Main extends Component {
               </Header>
               <Content
                 style={{
-                  textAlign: 'left',
-                  padding: '0px 0px 0px 500px',
+                  textAlign: 'center',
+                  padding: '0px 0px 0px 230px',
                   paddingDown: '200px',
+                  minWidth: '500px',
+                  maxWidth: '1000px',
                 }}
               >
                 <AllToDos
@@ -59,9 +61,11 @@ class Main extends Component {
               </Header>
               <Content
                 style={{
-                  textAlign: 'left',
-                  padding: '0px 0px 0px 500px',
+                  textAlign: 'center',
+                  padding: '0px 0px 0px 230px',
                   paddingDown: '200px',
+                  minWidth: '500px',
+                  maxWidth: '1000px',
                 }}
               >
                 <AddTask></AddTask>
