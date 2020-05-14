@@ -12,6 +12,7 @@ function Task(props) {
           style={{
             color: 'inherit',
             textDecoration: 'inherit',
+            fontSize: '25px',
             lineHeight: '30px',
           }}
         >
